@@ -10,6 +10,8 @@ Simple python bot to stop group raids.
 
 * Make a copy of `.env.example` and save it as `.env`. Modify it with your own bot token
 
+* Add telegram user id of users who can manage the anti raid bot as csv in the `admins` section of the `.env` file
+
 * Run `python -m bot`
 
 # Other

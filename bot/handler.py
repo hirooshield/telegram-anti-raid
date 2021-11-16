@@ -7,6 +7,9 @@ from .perms import (
     RaidPermissions,
     NormalPermissions
 )
+from decouple import config, Csv
+
+admins = config('admins', cast=Csv(int))
 
 
 def handle_new_member(update, ctx):
@@ -25,6 +28,8 @@ def handle_new_member(update, ctx):
 
 
 def handle_anti_raid(update, ctx):
+    if update.effective_user.id not in admins:
+        return False
     try:
         mode = ctx.chat_data['raid']
     except KeyError:
