@@ -13,7 +13,6 @@ admins = config('admins', cast=Csv(int))
 
 
 def handle_new_member(update, ctx):
-    print('running')
     members = update.message.new_chat_members
     bot = update.message.bot
     mode = ctx.chat_data.get('raid')
