@@ -16,7 +16,6 @@ def handle_new_member(update, ctx):
     members = update.message.new_chat_members
     bot = update.message.bot
     mode = ctx.chat_data.get('raid')
-    print(mode)
     if mode:
         for member in members:
             bot.ban_chat_member(
