@@ -7,7 +7,7 @@ from .handler import (
     toggle_anti_raid
 )
 
-bot_token = config('bot_token')
+bot_token = config('6877683238:AAHrFh-jy6tbCEErd8HsJJwimktmQzOAJdc')
 
 persistence = PicklePersistence(filename='anti_raid_bot.p')
 updater = Updater(token=bot_token, persistence=persistence)
